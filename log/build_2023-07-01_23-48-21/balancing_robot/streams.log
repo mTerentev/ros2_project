@@ -1,0 +1,25 @@
+[0.906s] Invoking command in '/home/mike/ros2_project/src/balancing_robot': PYTHONPATH=/home/mike/ros2_project/build/balancing_robot/prefix_override:/home/mike/ros2_project/install/balancing_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/balancing_robot build --build-base /home/mike/ros2_project/build/balancing_robot/build install --record /home/mike/ros2_project/build/balancing_robot/install.log --single-version-externally-managed
+[1.260s] running egg_info
+[1.261s] writing ../../build/balancing_robot/balancing_robot.egg-info/PKG-INFO
+[1.261s] writing dependency_links to ../../build/balancing_robot/balancing_robot.egg-info/dependency_links.txt
+[1.261s] writing entry points to ../../build/balancing_robot/balancing_robot.egg-info/entry_points.txt
+[1.261s] writing requirements to ../../build/balancing_robot/balancing_robot.egg-info/requires.txt
+[1.262s] writing top-level names to ../../build/balancing_robot/balancing_robot.egg-info/top_level.txt
+[1.265s] reading manifest file '../../build/balancing_robot/balancing_robot.egg-info/SOURCES.txt'
+[1.267s] writing manifest file '../../build/balancing_robot/balancing_robot.egg-info/SOURCES.txt'
+[1.267s] running build
+[1.267s] running build_py
+[1.267s] copying balancing_robot/regulator.py -> /home/mike/ros2_project/build/balancing_robot/build/lib/balancing_robot
+[1.268s] running install
+[1.269s] running install_lib
+[1.270s] copying /home/mike/ros2_project/build/balancing_robot/build/lib/balancing_robot/regulator.py -> /home/mike/ros2_project/install/balancing_robot/lib/python3.10/site-packages/balancing_robot
+[1.271s] byte-compiling /home/mike/ros2_project/install/balancing_robot/lib/python3.10/site-packages/balancing_robot/regulator.py to regulator.cpython-310.pyc
+[1.273s] running install_data
+[1.274s] running install_egg_info
+[1.277s] removing '/home/mike/ros2_project/install/balancing_robot/lib/python3.10/site-packages/balancing_robot-0.0.0-py3.10.egg-info' (and everything under it)
+[1.277s] Copying ../../build/balancing_robot/balancing_robot.egg-info to /home/mike/ros2_project/install/balancing_robot/lib/python3.10/site-packages/balancing_robot-0.0.0-py3.10.egg-info
+[1.279s] running install_scripts
+[1.304s] Installing regulator script to /home/mike/ros2_project/install/balancing_robot/lib/balancing_robot
+[1.305s] Installing spawn script to /home/mike/ros2_project/install/balancing_robot/lib/balancing_robot
+[1.305s] writing list of installed files to '/home/mike/ros2_project/build/balancing_robot/install.log'
+[1.342s] Invoked command in '/home/mike/ros2_project/src/balancing_robot' returned '0': PYTHONPATH=/home/mike/ros2_project/build/balancing_robot/prefix_override:/home/mike/ros2_project/install/balancing_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/balancing_robot build --build-base /home/mike/ros2_project/build/balancing_robot/build install --record /home/mike/ros2_project/build/balancing_robot/install.log --single-version-externally-managed

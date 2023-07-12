@@ -1,0 +1,136 @@
+<?xml version='1.0' ?>
+<sdf version='1.4'>
+    <model name='balancing_robot'>
+    <pose> 0 0 0 0 0 0 </pose>
+    <static>false</static>
+
+    <link name='chassis'>
+        <pose>0 0 0.6 0 0 0</pose>
+        <visual name='chassis'>
+            <geometry>
+                <box>
+                    <size>0.1 0.4 1</size>
+                </box>
+            </geometry>
+        </visual>
+        <collision name='chassis'>
+            <geometry>
+                <box>
+                    <size>0.1 0.4 1</size>
+                </box>
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass> 10 </mass>
+            <inertia>
+                <ixx> 0.97 </ixx>
+                <iyy> 0.842 </iyy>
+                <izz> 0.141 </izz>
+            </inertia>
+        </inertial>
+
+    </link>
+
+    <link name='left_wheel'>
+        <pose>0 0.3 0.21 1.57 0 0</pose>
+        <visual name='left_wheel'>
+            <geometry>
+                <cylinder>
+                    <radius>0.2</radius>
+                    <length>0.1</length>
+                </cylinder>
+            </geometry>
+        </visual>
+        <collision name='left_wheel'>
+            <geometry>
+                <cylinder>
+                    <radius>0.2</radius>
+                    <length>0.1</length>
+                </cylinder>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name='right_wheel'>
+        <pose>0 -0.3 0.21 1.57 0 0</pose>
+        <visual name='right_wheel'>
+            <geometry>
+                <cylinder>
+                    <radius>0.2</radius>
+                    <length>0.1</length>
+                </cylinder>
+            </geometry>
+        </visual>
+        <collision name='right_wheel'>
+            <geometry>
+                <cylinder>
+                    <radius>0.2</radius>
+                    <length>0.1</length>
+                </cylinder>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name='left_motor' type='revolute'>
+        <parent>chassis</parent>
+        <child>left_wheel</child>
+        <axis>
+            <xyz>0 1 0</xyz>
+        </axis>
+    </joint>
+
+    <joint name='right_motor' type='revolute'>
+        <parent>chassis</parent>
+        <child>right_wheel</child>
+        <axis>
+            <xyz>0 1 0</xyz>
+        </axis>
+    </joint>
+
+    <link name='imu_link'>
+        <sensor name="imu" type="imu">
+            <pose>0 0 0.6 0 0 0</pose>
+            <always_on>1</always_on>
+            <update_rate>100</update_rate>
+            <visualize>true</visualize>
+
+            <plugin name='imu' filename='libgazebo_ros_imu_sensor.so'>
+                <ros>
+                    <namespace>/balancing_robot</namespace>
+                </ros>
+            </plugin>
+        </sensor>
+    </link>
+
+    <joint name='imu_mount' type='fixed'>
+        <parent>chassis</parent>
+        <child>imu_link</child>
+    </joint>
+
+    <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
+        <ros>
+            <namespace>/balancing_robot</namespace>
+            <!-- <remapping>cmd_vel:=cmd_vel</remapping>
+            <remapping>odom:=odom</remapping> -->
+        </ros>
+
+        <left_joint>left_motor</left_joint>
+        <right_joint>right_motor</right_joint>
+
+        <wheel_separation>0.26</wheel_separation>
+        <wheel_diameter>0.2</wheel_diameter>
+
+        <max_wheel_torque>20</max_wheel_torque>
+        <max_wheel_acceleration>1.0</max_wheel_acceleration>
+
+        <publish_odom>true</publish_odom>
+        <publish_odom_tf>true</publish_odom_tf>
+        <publish_wheel_tf>true</publish_wheel_tf>
+
+        <odometry_frame>odom</odometry_frame>
+        <robot_base_frame>chassis</robot_base_frame>
+    </plugin>      
+
+    </model>
+</sdf>

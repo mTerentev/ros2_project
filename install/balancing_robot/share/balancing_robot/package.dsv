@@ -1,0 +1,6 @@
+source;share/balancing_robot/hook/pythonpath.ps1
+source;share/balancing_robot/hook/pythonpath.dsv
+source;share/balancing_robot/hook/pythonpath.sh
+source;share/balancing_robot/hook/ament_prefix_path.ps1
+source;share/balancing_robot/hook/ament_prefix_path.dsv
+source;share/balancing_robot/hook/ament_prefix_path.sh

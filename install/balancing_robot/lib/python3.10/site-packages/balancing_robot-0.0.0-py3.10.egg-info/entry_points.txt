@@ -1,0 +1,7 @@
+[console_scripts]
+controller = balancing_robot.controller:main
+imu_decoder = balancing_robot.imu:main
+regulator = balancing_robot.regulator:main
+spawn = balancing_robot.spawn:main
+teleop_node = balancing_robot.teleop:main
+

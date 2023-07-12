@@ -1,0 +1,20 @@
+running egg_info
+writing ../../build/balancing_robot/balancing_robot.egg-info/PKG-INFO
+writing dependency_links to ../../build/balancing_robot/balancing_robot.egg-info/dependency_links.txt
+writing entry points to ../../build/balancing_robot/balancing_robot.egg-info/entry_points.txt
+writing requirements to ../../build/balancing_robot/balancing_robot.egg-info/requires.txt
+writing top-level names to ../../build/balancing_robot/balancing_robot.egg-info/top_level.txt
+reading manifest file '../../build/balancing_robot/balancing_robot.egg-info/SOURCES.txt'
+writing manifest file '../../build/balancing_robot/balancing_robot.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/balancing_robot.launch.py -> /home/mike/ros2_project/install/balancing_robot/share/balancing_robot/launch
+running install_egg_info
+removing '/home/mike/ros2_project/install/balancing_robot/lib/python3.10/site-packages/balancing_robot-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/balancing_robot/balancing_robot.egg-info to /home/mike/ros2_project/install/balancing_robot/lib/python3.10/site-packages/balancing_robot-0.0.0-py3.10.egg-info
+running install_scripts
+Installing spawn script to /home/mike/ros2_project/install/balancing_robot/lib/balancing_robot
+writing list of installed files to '/home/mike/ros2_project/build/balancing_robot/install.log'
