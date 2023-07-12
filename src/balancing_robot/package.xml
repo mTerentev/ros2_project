@@ -7,6 +7,8 @@
   <maintainer email="miterentev22@gmail.com">mike</maintainer>
   <license>TODO: License declaration</license>
 
+  <depend> pynput </depend>
+
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
